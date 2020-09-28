@@ -43,6 +43,11 @@ public class Game {
   public int getLength() {
     return length;
   }
+  public int getGuessCount() {
+    return guesses.size();
+  }
+
+
 
   public Guess guess(String text) {
     if (text.length() != length) {
