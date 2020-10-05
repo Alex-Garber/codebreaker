@@ -49,13 +49,14 @@ public class Game {
 
 
 
-  public Guess guess(String text) {
+  public Guess guess(String text)
+      throws IllegalGuessLengthException, IllegalGuessCharacterException{
     if (text.length() != length) {
-      throw new IllegalArgumentException(String.format(
+      throw new IllegalGuessLengthException(String.format(
           ILLEGAL_LENGHT_MESSAGE, length, text.length()));
     }
     if (text.matches(badGuessPattern)){
-      throw new IllegalArgumentException(String.format(
+      throw new IllegalGuessCharacterException(String.format(
           ILLEGAL_CHARACTER_MESSAGE, pool, text));
     }
     Guess guess = code.new Guess(text);
@@ -63,4 +64,11 @@ public class Game {
     return guess;
 
   }
+
+  public void restart() {
+    guesses.clear();
+  }
+
+
+
 }

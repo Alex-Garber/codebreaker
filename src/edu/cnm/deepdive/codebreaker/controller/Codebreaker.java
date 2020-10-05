@@ -9,7 +9,7 @@ import java.io.Reader;
 import java.security.SecureRandom;
 
 public class Codebreaker {
-private static final String CHARACTER_POOL = "ROYGBIV";
+private static final String CHARACTER_POOL = "ROYGBV";
   private static final int CODE_LENGTH = 4;
   public static void main(String[] args)  {
     Game game = new Game(CHARACTER_POOL, CODE_LENGTH, new SecureRandom());
