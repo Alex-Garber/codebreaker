@@ -48,7 +48,8 @@ public class Code {
 
     /**
      * Computes how many of the characters in the users guess that are correct.
-     * @param text
+     *
+     * @param text {@link String} of characters that displays the amount correct and amount close in the users guess.
      */
     public Guess(String text) {
       this.text = text;
